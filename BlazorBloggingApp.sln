@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorBloggingApp.Shared", "BlazorBloggingApp.Shared\BlazorBloggingApp.Shared.csproj", "{D9B75E72-819B-4776-9BB4-930065C5F741}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorBloggingApp.ServerSide", "BlazorBloggingApp.ServerSide\BlazorBloggingApp.ServerSide.csproj", "{70319DFC-A532-410F-89CE-2B1C5F2D11B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorBloggingApp.WebAssembly", "BlazorBloggingApp.WebAssembly\BlazorBloggingApp.WebAssembly.csproj", "{685DB45E-AC0F-47EB-95E8-B9CF85856E65}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9B75E72-819B-4776-9BB4-930065C5F741}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9B75E72-819B-4776-9BB4-930065C5F741}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9B75E72-819B-4776-9BB4-930065C5F741}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9B75E72-819B-4776-9BB4-930065C5F741}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70319DFC-A532-410F-89CE-2B1C5F2D11B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70319DFC-A532-410F-89CE-2B1C5F2D11B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70319DFC-A532-410F-89CE-2B1C5F2D11B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70319DFC-A532-410F-89CE-2B1C5F2D11B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{685DB45E-AC0F-47EB-95E8-B9CF85856E65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{685DB45E-AC0F-47EB-95E8-B9CF85856E65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{685DB45E-AC0F-47EB-95E8-B9CF85856E65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{685DB45E-AC0F-47EB-95E8-B9CF85856E65}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
