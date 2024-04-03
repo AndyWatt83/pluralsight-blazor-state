@@ -1,0 +1,43 @@
+﻿@page "/edit-post/{PostId:int}"
+@using BlazorBloggingApp.WebAssembly.Services
+@code {
+    [Parameter]
+    public int PostId { get; set; }
+
+    // Add properties for Title and Content that will be bound to form inputs
+    public string Title { get; set; } = string.Empty;
+    public string Content { get; set; } = string.Empty;
+
+    // Inject the BlogPostService to fetch and update the post
+    [Inject]
+    public IBlogPostService BlogPostService { get; set; } = default!;
+    [Inject]
+    public NavigationManager NavigationManager { get; set; } = default!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var post = await BlogPostService.GetPostByIdAsync(PostId);
+        if (post != null)
+        {
+            Title = post.Title;
+            Content = post.Content;
+        }
+    }
+
+    // Method to update the post
+    private async Task UpdatePost()
+    {
+        // Assume UpdateBlogPostAsync updates the post and returns a success flag or the updated post
+        var updated = await BlogPostService.UpdateBlogPostAsync(PostId, Title, Content);
+        if (updated)
+        {
+            NavigationManager.NavigateTo($"/post/{PostId}");
+        }
+    }
+}
+
+<EditForm Model="@this" OnValidSubmit="UpdatePost">
+    <InputText id="title" @bind-Value="Title" />
+    <InputTextArea id="content" @bind-Value="Content" />
+    <button type="submit">Update Post</button>
+</EditForm>
